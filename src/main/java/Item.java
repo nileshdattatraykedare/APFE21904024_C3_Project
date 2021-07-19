@@ -10,7 +10,7 @@ public class Item {
     public String getName() {
         return name;
     }
-
+    // method for Part 3: Solution
     public int getPrice() { return price; }
 
     @Override

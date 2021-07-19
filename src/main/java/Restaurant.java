@@ -65,6 +65,7 @@ public class Restaurant {
         return name;
     }
 
+    //Part 3: Solution
     public int getOrderTotal(List<String> items){
         int orderTotal = 0;
         for (String itemName: items){
