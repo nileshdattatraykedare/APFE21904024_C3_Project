@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -59,4 +61,16 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<TDD for Order total calculation>>>>>>>>>
+    // this test case was written for Part 3: Failing test case
+    @Test
+    public void adding_items_should_give_non_zero_order_total(){
+        List<String> itemList = new ArrayList<String>();
+        itemList.add("Sweet corn soup");
+        itemList.add("Vegetable lasagne");
+        assertTrue(restaurant.getOrderTotal(itemList) > 0);
+
+    }
 }
